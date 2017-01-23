@@ -26,6 +26,13 @@
       .diagram-display text {
         font-size: 16px; !important
       }
+
+      .function-plot {
+        background-color:#fff;
+        width:500px;
+        height:500px;
+        margin: 0 auto;
+      }
     </style>
 
 		<!-- Printing and PDF exports -->
@@ -140,6 +147,20 @@
           </span>
           <div class="diagram-display stretch"></div>
         </section>
+
+        <section>
+          <h4>Function Plot Demo</h4>
+          <div class="plot" id="myplot1" class="function-plot">
+          <!--
+          {
+            "xAxis": {"domain": ["-10", "10"]},
+            "yAxis": {"domain": ["0", "10"]},
+            "data": [{ "fn": "10 -x * x/10" }]
+          }
+          -->
+          </div>
+        </section>
+          node.js
 			</div>
 		</div>
 
