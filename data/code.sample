@@ -1,0 +1,25 @@
+// sample(ruby_hello)
+class Teste
+  def say
+    puts "Hello World"
+  end
+end
+// end-sample
+
+// sample(js_hello)
+function helloWorld() {
+  console.log("Hello World");
+}
+// end-sample
+
+// sample(ruby_fragment)
+class HelloWorld
+  def initialize(name)
+    @name = name
+  end
+
+  def say
+    "Hello, #{name}"
+  end
+end
+// end-sample
