@@ -23,5 +23,9 @@
     "node_modules",
     "bower_components",
     "test"
-  ]
+  ],
+  "devDependencies": {
+    "reveal.js-plugins": "*",
+    "mermaid": "^6.0.0"
+  }
 }

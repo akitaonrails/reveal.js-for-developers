@@ -7,10 +7,26 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="css/mermaid.css" />
+    <style type="text/css" media="all">
+      .diagram-data { display: none }
+      .diagram-display {
+        padding: 0;
+        margin: 0;
+        min-height: 700px;
+        min-width:100%;
+        height:auto;
+      }
+
+      .diagram-display text {
+        font-size: 16px; !important
+      }
+    </style>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -27,7 +43,7 @@
         <section>
           <h4>Line Chart Demo 1</h4>
           <canvas class="stretch" data-chart="line">
-          <!-- 
+          <!--
           {
            "data": {
             "labels": ["January"," February"," March"," April"," May"," June"," July"],
@@ -41,7 +57,7 @@
               "label":"My second dataset","backgroundColor":"rgba(220,120,120,.8)"
              }
             ]
-           }, 
+           },
            "options": { "responsive": "true" }
           }
           -->
@@ -54,8 +70,8 @@
           My first dataset, 65, 59, 80, 81, 56, 55, 40
           <!-- This is a comment that will be ignored -->
           My second dataset, 28, 48, 40, 19, 86, 27, 90
-          <!-- 
-          { 
+          <!--
+          {
            "data" : {
             "labels" : ["Enero", "Febrero", "Marzo", "Avril", "Mayo", "Junio", "Julio"],
             "datasets" : [{ "borderColor": "#0f0", "borderDash": ["5","10"] }, { "borderColor": "#0ff" } ]
@@ -70,12 +86,67 @@
           <canvas class="stretch" data-chart="bar" data-chart-src="data/chart_demo.csv">
           </canvas>
         </section>
+
+        <section class="diagram-slide">
+          <h4>Mermaid Diagram Demo</h4>
+          <span class="diagram-data">
+          graph LR;
+            A(AAAA)==> B(B node);
+            B==> C(SEE SEE);
+
+            class A diag-a-styles;
+            class B diag-b-styles
+            class C diag-c-styles;
+          </span>
+          <div class="diagram-display stretch"></div>
+        </section>
+
+        <section class="diagram-slide">
+          <h4>Mermaid Sequence Demo</h4>
+          <span class="diagram-data">
+          sequenceDiagram
+            participant Alice
+            participant Bob
+            Alice->>John: Hello John, how are you?
+            loop Healthcheck
+                John->>John: Fight against hypochondria
+            end
+            Note right of John: Rational thoughts <br/>prevail...
+            John-->>Alice: Great!
+            John->>Bob: How about you?
+            Bob-->>John: Jolly good!
+          </span>
+          <div class="diagram-display stretch"></div>
+        </section>
+
+        <section class="diagram-slide">
+          <h4>Mermaid Gantt Demo</h4>
+          <span class="diagram-data">
+          gantt
+            dateFormat  YYYY-MM-DD
+            title Adding GANTT diagram functionality to mermaid
+            section A section
+            Completed task            :done,    des1, 2014-01-06,2014-01-08
+            Active task               :active,  des2, 2014-01-09, 3d
+            Future task               :         des3, after des2, 5d
+            Future task2               :         des4, after des3, 5d
+            section Critical tasks
+            Completed task in the critical line :crit, done, 2014-01-06,24h
+            Implement parser and jison          :crit, done, after des1, 2d
+            Create tests for parser             :crit, active, 3d
+            Future task in critical line        :crit, 5d
+            Create tests for renderer           :2d
+            Add to mermaid                      :1d
+          </span>
+          <div class="diagram-display stretch"></div>
+        </section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/mermaid.min.js"></script>
 		<script src="js/reveal.js"></script>
 
-    <script src="lib/js/config.js"><>/script>
+    <script src="lib/js/config.js"></script>
 	</body>
 </html>
