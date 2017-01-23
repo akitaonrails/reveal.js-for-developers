@@ -12,7 +12,12 @@
     "Hakim El Hattab <hakim.elhattab@gmail.com>"
   ],
   "dependencies": {
-    "headjs": "~1.0.3"
+    "headjs": "~1.0.3",
+    "reveal.js-plugins": "*",
+    "mermaid": "^6.0.0",
+    "function-plot": "^1.17.1",
+    "reveal-code-focus": "^1.0.0",
+    "highlightjs": "^9.9.0"
   },
   "repository": {
     "type": "git",
@@ -23,12 +28,5 @@
     "node_modules",
     "bower_components",
     "test"
-  ],
-  "devDependencies": {
-    "reveal.js-plugins": "*",
-    "mermaid": "^6.0.0",
-    "function-plot": "^1.17.1",
-    "reveal-code-focus": "^1.0.0",
-    "highlightjs": "^9.9.0"
-  }
+  ]
 }
