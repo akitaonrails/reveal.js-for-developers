@@ -27,6 +27,8 @@
   "devDependencies": {
     "reveal.js-plugins": "*",
     "mermaid": "^6.0.0",
-    "function-plot": "^1.17.1"
+    "function-plot": "^1.17.1",
+    "reveal-code-focus": "^1.0.0",
+    "highlightjs": "^9.9.0"
   }
 }

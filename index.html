@@ -6,13 +6,21 @@
 
 		<title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/beige.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/highlight/github-gist.css">
-
     <link rel="stylesheet" href="css/mermaid.css" />
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <style type="text/css" media="all">
+      .line { display: block; }
+      .line.hover { background: yellow; }
+    </style>
+    <link rel="stylesheet" href="lib/css/highlight/github-gist.css">
+    <style type="text/css" media="all">
+      .line.focus { background: black; color: white; }
+      .line.focus .hljs-comment, .line.focus .hljs-quote { color: grey; }
+    </style>
+
     <style type="text/css" media="all">
       .diagram-data { display: none }
       .diagram-display {
@@ -187,21 +195,37 @@
         <section>
           <h4>Code Highlight Demo</h4>
           <pre class="noshadow">
-            <code data-trim data-noescape class="ruby">
-            class Teste
-              def say
-                puts "Hello World"
-              end
-            end
+            <code class="ruby">
+class Teste
+  def say
+    puts "Hello World"
+  end
+end
             </code>
           </pre>
           <pre class="noshadow">
-            <code data-trim data-noescape class="javascript">
-            function helloWorld() {
-              console.log("Hello World");
-            }
+            <code class="javascript">
+function helloWorld() {
+  console.log("Hello World");
+}
             </code>
           </pre>
+        </section>
+
+        <section>
+          <pre class="noshadow">
+            <code class="ruby">class HelloWorld
+  def initialize(name)
+    @name = name
+  end
+
+  def say
+    "Hello, #{name}"
+  end
+end</code>
+          </pre>
+        <p class="fragment" data-code-focus="3">sets the instance variable for name</p>
+        <p class="fragment" data-code-focus="7">concatenates the initialized name</p>
         </section>
 
         <section tagcloud>

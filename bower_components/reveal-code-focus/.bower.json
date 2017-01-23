@@ -1,0 +1,25 @@
+{
+  "name": "reveal-code-focus",
+  "main": "reveal-code-focus.js",
+  "ignore": [
+    ".*",
+    "*.html",
+    "*.log",
+    "*.md",
+    "package.json",
+    "test",
+    "vendor"
+  ],
+  "homepage": "https://github.com/demoneaux/reveal-code-focus",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "3c65fce1656c25d6c0678b230ad06b216d8bb976"
+  },
+  "_source": "https://github.com/demoneaux/reveal-code-focus.git",
+  "_target": "^1.0.0",
+  "_originalSource": "reveal-code-focus",
+  "_direct": true
+}
