@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/theme/beige.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/highlight/github-gist.css">
 
     <link rel="stylesheet" href="css/mermaid.css" />
     <style type="text/css" media="all">
@@ -32,6 +32,12 @@
         width:500px;
         height:500px;
         margin: 0 auto;
+      }
+
+      pre.noshadow {
+	      -webkit-box-shadow: none;
+	      -moz-box-shadow: none;
+	      box-shadow: none;
       }
     </style>
 
@@ -159,6 +165,37 @@
           }
           -->
           </div>
+        </section>
+
+        <section data-markdown>
+          <script type="text/template" charset="utf-8">
+          ### Markdown Test
+
+          Example of markdown rendering:
+
+          * Bullet 1
+          * **Bold** bullet 2
+          </script>
+        </section>
+
+        <section>
+          <h4>Code Highlight Demo</h4>
+          <pre class="noshadow">
+            <code data-trim data-noescape class="ruby">
+            class Teste
+              def say
+                puts "Hello World"
+              end
+            end
+            </code>
+          </pre>
+          <pre class="noshadow">
+            <code data-trim data-noescape class="javascript">
+            function helloWorld() {
+              console.log("Hello World");
+            }
+            </code>
+          </pre>
         </section>
           node.js
 			</div>
