@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
+    <meta charset="utf-8">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>reveal.js</title>
@@ -62,7 +66,11 @@
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    </script>
+
+ 		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<div class="reveal">
@@ -92,7 +100,7 @@
         </section>
 
         <section>
-          <h4>Line Chart 2emo 2</h4>
+          <h4>Line Chart Demo 2</h4>
           <canvas class="stretch" data-chart="line">
           My first dataset, 65, 59, 80, 81, 56, 55, 40
           <!-- This is a comment that will be ignored -->
@@ -117,9 +125,12 @@
         <section class="diagram-slide">
           <h4>Mermaid Diagram Demo</h4>
           <span class="diagram-data">
-          graph LR;
-            A(AAAA)==> B(B node);
-            B==> C(SEE SEE);
+          graph TD;
+            A(Step 1)==> B(Step 2);
+            B==> C(Step 3);
+            B==> D(Branch 1);
+            C==>A;
+            D==>C;
 
             class A diag-a-styles;
             class B diag-b-styles
